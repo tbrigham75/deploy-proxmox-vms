@@ -1,0 +1,15 @@
+---
+- hosts: pvenodes
+  become: false
+  gather_facts: false
+  tasks:
+    - name: Create new VM with minimal options 
+      vars:
+        ansible_python_interpreter: /usr/bin/python3
+      proxmox_kvm:
+        api_user: tom@pam
+        api_token_id:  tom-token
+        api_token_secret:  2cb12020-2ef4-44f4-b1f6-15545a884e0f
+        api_host: pvenodes
+        node: proxmox01
+        name: vmtest

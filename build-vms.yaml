@@ -1,0 +1,28 @@
+---
+- hosts: localhost
+  become: false
+  gather_facts: false
+  tasks:
+    - name: Create new VM with minimal options 
+      vars:
+        variable_name: '{{item}}'
+      loop:
+        '{{variable_files}}'
+
+- hosts: pvenodes
+  become: false
+  gather_facts: false 
+
+  roles:
+  #Download cloud-init images
+    - download_cloud_init_images
+  #Create cloud-init files
+    - create_user_files
+
+- hosts: pvenodes[0]
+  become: false
+  gather_facts: false
+
+  roles:
+  #Create VMS
+    - create_vms

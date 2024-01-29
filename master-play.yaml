@@ -1,0 +1,5 @@
+---
+#Intial time run: 
+# ssh-keyscan 192.168.2.160 >> ~/.ssh/known_hosts
+# ansible-playbook deploy-ssh.yaml --ask-pass -K to setup SSH cert and no password
+- import_playbook: copy-files.yaml

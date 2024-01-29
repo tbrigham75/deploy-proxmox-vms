@@ -1,0 +1,11 @@
+- name: vmtest01
+  vmid:  103
+  node: proxmox01
+  image_file: debian-11-generic-amd64.qcow2
+  cores: 1
+  memory: 1024
+  #vlan: 1 - only use if using vlan tagging
+  ipv4mode: static
+  ipv4_address: 192.168.2.168/24
+  ipv4_gateway: 192.168.2.1
+  state: new

@@ -1,0 +1,5 @@
+  - name: Debian11-Image
+    cloud_init_file: debian-11-generic-amd64.qcow2
+    image_url: https://cloud.debian.org/images/cloud/bullseye/latest/debian-11-generic-arm64.qcow2
+    image_checksum:  sha512:84bc8641ab3f5ee761f1542f708b436e82a54388f564a62cd173f6ec3c68a52a7c09b8da5d6b91d96f1e4847a117c7608fa060ab11b6330995d6a8184dda3530
+    state: present

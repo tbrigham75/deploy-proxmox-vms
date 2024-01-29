@@ -1,0 +1,8 @@
+project_path: '/home/tom/devops/ansible/deploy-proxmox-vms'
+image_path: '/var/lib/vz/images/0'
+domain_name: 'home.org'
+timezone: 'America/Denver'
+group_name: pvenodes
+variable_files:
+  - images
+  - vms
